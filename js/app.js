@@ -61,12 +61,6 @@ async function buscarImagenes() {
 
   const key = "31301138-29d7e292be5a2ab39315d3e9f";
   const url = `https://pixabay.com/api/?key=${key}&q=${termino}&per_page=${registrosPorPagina}&page=${paginaActual}`;
-  /* fetch(url)
-    .then((respuesta) => respuesta.json())
-    .then((resultado) => {
-      totalPaginas = calcularPaginas(resultado.totalHits);
-      mostrarImagenes(resultado.hits);
-    }); */
     try{
       const respuesta = await fetch(url);
       const resultado = await respuesta.json();
